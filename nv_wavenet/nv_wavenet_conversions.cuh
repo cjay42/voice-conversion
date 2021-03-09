@@ -38,7 +38,7 @@
 bool isDevicePtr(const void* ptr) {
     cudaPointerAttributes attributes;
     cudaError_t result = cudaPointerGetAttributes(&attributes, ptr);
-    return (result == cudaSuccess) && (attributes.memoryType == cudaMemoryTypeDevice);
+    return (result == cudaSuccess) /* && (attributes.memoryType == cudaMemoryTypeDevice) */;
 }
 
 
